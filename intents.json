@@ -1,0 +1,157 @@
+  {
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["hi", "hello", "hey", "howdy", "hola", "bonjour", "greetings", "good day", "good morning", "good afternoon", "good evening", "what's up", "how's it going"],
+        "responses": {
+          "greeting": ["Hi!", "Hello!", "Hey there!"]
+        },
+        "context": [""],
+        "feature": ["Acknowledge the user's greeting and engage in a friendly conversation."]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["bye", "goodbye", "see you later", "catch you later", "take care", "farewell", "bye for now", "talk to you later", "adios", "au revoir"],
+        "responses": {
+          "goodbye": ["Bye!", "See you later!", "Goodbye!"]
+        },
+        "context": [""],
+        "feature": ["Respond appropriately to the user's goodbye and end the conversation."]
+      },
+      {
+        "tag": "how_you_doing",
+        "patterns": ["how are you", "how's it going", "how are you doing", "how do you feel", "are you okay", "how's your day going", "how's everything"],
+        "responses": {
+            "how_you_doing":["I'm great, Thank you for asking"]
+        },
+        "context": [""],
+        "feature": ["Respond to the user's inquiry about how you are doing and express gratitude."]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["thank you", "thanks", "appreciate it", "thank you very much", "thanks a lot", "thanks so much", "thanks for your help", "I appreciate your help"],
+        "responses": {
+            "thanks":["You are welcome"]
+        },
+        "context": [""],
+        "feature": ["Express gratitude for the user's appreciation."]
+      },
+      {
+        "tag": "no_answer",
+        "patterns": ["I don't understand", "can you explain", "what do you mean", "I'm confused", "that doesn't make sense", "could you clarify"],
+        "responses": {
+            "no_answer":["I'm Sorry I cannot understand"]
+        },
+        "context": [""],
+        "feature": ["Handle the scenario when the system cannot provide a relevant response."]
+      },
+      {
+        "tag": "about_us",
+        "patterns": ["about us", "who we are", "about the company", "company overview", "what we do", "tell me about your company","tell me about acumen", "what does your company do", "what is your company about"],
+        "responses": {
+            "about_us":["Welcome to Acumen Intelligence! We're global leaders in B2B lead generation, providing cost-effective solutions with clear goals and maximum ROI. With our on-demand digital marketing platform and direct access to over 25 million decision makers worldwide, we're dedicated to driving your success. Let's explore the boundless potential of B2B lead generation together!"]
+        },
+        "context": [""],
+        "feature": ["Provide an overview of the company's background, mission, and values."]
+      },
+      {
+        "tag": "services",
+        "patterns": ["our services", "what we offer", "services provided", "solutions", "what services do you provide", "what solutions do you offer", "tell me about your services", "what can you do for me"],
+        "responses": {
+          "services": ["Our company offers a wide range of services tailored to meet the diverse needs of our clients from content syndication to account-based marketing, we provide solutions that drive results and exceed expectations."]
+        },
+        "context": [""],
+        "feature": ["Detail the range of services provided by the company and how they address customer needs."]
+      },
+      {
+        "tag": "content_syndication",
+        "patterns": ["content syndication", "syndication services", "content distribution", "tell me about your content syndication", "how do you distribute content", "what is your content syndication strategy"],
+        "responses": {
+          "content_syndication": ["At Acumen Intelligence, we provide highly segmented leads for your email marketing campaigns. We ensure your valuable content reaches the right people at the right time, making a significant impact on your prospect's buying decisions."]
+        },
+        "context": [""],
+        "feature": ["Explain how Acumen Intelligence distributes content to reach target audiences effectively."]
+      },
+      {
+        "tag": "account_based_marketing",
+        "patterns": ["account-based marketing", "ABM", "targeted marketing", "tell me about your ABM", "how do you do targeted marketing", "what is your ABM strategy"],
+        "responses": {
+          "account_based_marketing": ["Acumen Intelligence provides details of leads who have a proven interest in a client's product or service. Our telemarketing leads are ready for meaningful sales conversations, making our approach to account-based marketing highly effective."]
+        },
+        "context": [""],
+        "feature": ["Describe Acumen Intelligence's approach to account-based marketing and personalized targeting."]
+      },
+      {
+        "tag": "webinar_events",
+        "patterns": ["webinars", "virtual events", "event solutions", "tell me about your webinars", "how do you host virtual events", "what webinars do you offer"],
+        "responses": {
+          "webinar_events": ["Acumen Intelligence specializes in organizing and hosting webinars and virtual events. We understand that prospects are everywhere, reachable through various means. We help you sell your service in a variety of ways to reach your prospects."]
+        },
+        "context": [""],
+        "feature": ["Highlight Acumen Intelligence's expertise in organizing and hosting webinars and virtual events."]
+      },
+      {
+        "tag": "intent_data",
+        "patterns": ["intent data", "buyer intent analysis", "audience targeting", "tell me about your intent data", "how do you analyze buyer intent", "what is intent data"],
+        "responses": {
+          "intent_data": ["At Acumen Intelligence, we track B2B buyers as they actively engage with content. Whether they are downloading assets, attending a webinar, or completing an online subscription, they are continuously being scored through our automated system. This data is fed back to your sales and marketing teams to provide insight."]
+        },
+        "context": [""],
+        "feature": ["Explain how Acumen Intelligence analyzes buyer intent data to target audiences effectively."]
+      },
+      {
+        "tag": "display_advertising",
+        "patterns": ["display advertising", "programmatic ads", "digital advertising", "tell me about your display advertising", "how do you do programmatic ads", "what is display advertising"],
+        "responses": {
+          "display_advertising": ["Acumen Intelligence offers multi-platform availability, partnering with top-tier publishers to deliver your ads on popular platforms like Google, LinkedIn, and Facebook. These ads can be seamlessly integrated into various third-party seller websites, enabling your brand to be showcased in the spaces where your company analytics have been well-practiced."]
+        },
+        "context": [""],
+        "feature": ["Detail Acumen Intelligence's approach to display advertising and programmatic ad campaigns."]
+      },
+      {
+        "tag": "resources",
+        "patterns": ["resources", "resource library", "blog", "tell me about your resources", "what resources do you have", "do you have a blog", "where is your resource library"],
+        "responses": {
+          "resources": ["Acumen Intelligence offers a variety of resources such as blogs and a resource library. These resources provide valuable insights and information to our audience."]
+        },
+        "context": [""],
+        "feature": ["Highlight the available resources such as blogs and the resource library provided by Acumen Intelligence."]
+      },
+      {
+        "tag": "lead_qualification",
+        "patterns": ["lead qualification", "qualify leads", "lead generation", "tell me about your lead qualification", "how do you generate leads", "what is your lead qualification process"],
+        "responses": {
+          "lead_qualification": ["Acumen Intelligence's primary goal is to generate leads that are primed for sales, by identifying prospects who are already further along in the sales funnel. These priority leads hold immense potential and, when nurtured effectively, can result in unparalleled conversion rates."]
+        },
+        "context": [""],
+        "feature": ["Explain the process of lead qualification and lead generation strategies used by Acumen Intelligence."]
+      },
+      {
+        "tag": "brand_visibility",
+        "patterns": ["brand visibility", "branding", "visibility enhancement", "how do you enhance brand visibility", "tell me about your branding strategies", "how do you improve visibility"],
+        "responses": {
+          "brand_visibility": ["Enhancing brand visibility is a top priority at Acumen Intelligence. We employ a variety of strategies to increase brand awareness and recognition among our target audience."]
+        },
+        "context": [""],
+        "feature": ["Discuss strategies employed by Acumen Intelligence to enhance brand visibility and branding."]
+      },
+      {
+        "tag": "customer_engagement",
+        "patterns": ["customer engagement", "engagement strategies", "customer interaction", "how do you engage customers", "tell me about your customer engagement strategies", "how do you interact with customers"],
+        "responses": {
+          "customer_engagement": ["Acumen Intelligence is committed to fostering meaningful customer engagement and interactions. Our customer engagement strategies are designed to build strong relationships and drive loyalty."]
+        },
+        "context": [""],
+        "feature": ["Detail Acumen Intelligence's customer engagement strategies and approaches to customer interaction."]
+      },
+      {
+        "tag": "contact_us",
+        "patterns": ["contact us", "get in touch", "reach out", "how can I contact you", "where can I reach you", "I want to contact you"],
+        "responses": {
+          "contact_us": ["For inquiries or assistance, please feel free to contact Acumen Intelligence. We're always here to help!"]
+        },
+        "context": [""],
+        "feature": ["Provide information on how users can contact Acumen Intelligence for inquiries or assistance."]
+      }
+  ]
+}
