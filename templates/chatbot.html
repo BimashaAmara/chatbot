@@ -133,28 +133,69 @@
         chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
     });
 
+function getMessageContent(response) {
+    if (response.response && response.response.greeting) {
+        return response.response.greeting[0];
+    }
+    if (response.response && response.response.goodbye) {
+        return response.response.goodbye[0];
+    }
+    if (response.response && response.response.how_you_doing) {
+        return response.response.how_you_doing[0];
+    }
+    if (response.response && response.response.thanks) {
+        return response.response.thanks[0];
+    }
+    if (response.response && response.response.no_answer) {
+        return response.response.no_answer[0];
+    }
+    if (response.response && response.response.about_us) {
+        return response.response.about_us[0];
+    }
+    if (response.response && response.response.services) {
+        return response.response.services[0];
+    }
+    if (response.response && response.response.content_syndication) {
+        return response.response.content_syndication[0];
+    }
+    if (response.response && response.response.account_based_marketing) {
+        return response.response.account_based_marketing[0];
+    }
+    if (response.response && response.response.webinar_events) {
+        return response.response.webinar_events[0];
+    }
+    if (response.response && response.response.intent_data) {
+        return response.response.intent_data[0];
+    }
+    if (response.response && response.response.display_advertising) {
+        return response.response.display_advertising[0];
+    }
+    if (response.response && response.response.resources) {
+        return response.response.resources[0];
+    }
+    if (response.response && response.response.lead_qualification) {
+        return response.response.lead_qualification[0];
+    }
+    if (response.response && response.response.brand_visibility) {
+        return response.response.brand_visibility[0];
+    }
+    if (response.response && response.response.customer_engagement) {
+        return response.response.customer_engagement[0];
+    }
+    if (response.response && response.response.contact_us) {
+        return response.response.contact_us[0];
+    }
+    return response;
+}
+
     sendButton.addEventListener('click', function() {
         const userMessage = userInput.value;
         if (userMessage.trim() !== '') {
             addMessage(userMessage, 'user');
             userInput.value = '';
-            sendUserMessageToBackend(userMessage); 
+            sendUserMessageToBackend(userMessage);
         }
     });
-
-    // Function to fetch response from the backend
-    function fetchBotResponse() {
-        fetch('/get_response')
-        .then(response => response.json())
-        .then(data => {
-            const botResponse = data.response;
-            addMessage(botResponse, 'bot');
-        })
-        .catch(error => console.error('Error fetching bot response:', error));
-    }
-
-    // Call fetchBotResponse function periodically
-    setInterval(fetchBotResponse, 2000);
 
     function sendUserMessageToBackend(userMessage) {
     fetch('/chatbot', {
@@ -166,7 +207,7 @@
     })
     .then(response => response.json())
     .then(data => {
-        const botResponse = data.response;
+        const botResponse = getMessageContent(data);
         addMessage(botResponse, 'bot');
     })
     .catch(error => console.error('Error:', error));
